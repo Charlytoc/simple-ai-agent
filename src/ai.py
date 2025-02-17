@@ -259,14 +259,11 @@ class AIFactory:
         self.ai.text_to_speech(text, voice, file_path)
 
 
-def dict_to_message(data: dict):
-    """Convert a dictionary to a Message object."""
-    return Message(role=data["role"], text=data["text"], images=data["images"])
-
 
 def toolify(func):
     """
-    Convert a Python function into a valid OpenAI function calling schema.
+    Convert a Python function into a valid OpenAI function calling schema. For more information on how to use this, see the OpenAI API documentation.
+    Function calling docs: https://platform.openai.com/docs/guides/function-calling
     """
     type_map = {
         str: "string",

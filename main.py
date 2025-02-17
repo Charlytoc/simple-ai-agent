@@ -18,6 +18,7 @@ PROVIDER = "openai"
 MODEL = "gpt-4o-mini"
 
 
+# To obtain an API key, visit https://platform.openai.com/api-keys
 async def main():
     ai = AIFactory(PROVIDER, os.getenv("OPENAI_API_KEY"))
     ai.add_messages([system_message])
