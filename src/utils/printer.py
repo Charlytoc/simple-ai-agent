@@ -6,7 +6,7 @@ def colorize(text, color):
         "green": "\033[32m",
         "yellow": "\033[33m",
         "blue": "\033[34m",
-        "magenta": "\033[35m",  
+        "magenta": "\033[35m",
         "cyan": "\033[36m",
         "white": "\033[37m",
     }
@@ -33,30 +33,30 @@ class Printer:
     def _color_text(self, text, color):
         return f"{self.colors[color]}{text}{self.colors['reset']}"
 
-    def print_colored(self, *args, color="reset", sep=" ", end="\n"):
+    def print_colored(self, *args, color="reset", sep=" ", end="\n", flush=False):
         if self.identifier:
             print(f"[{self.identifier}] ", end="")
         colored_texts = [self._color_text(str(arg), color) for arg in args]
-        print(sep.join(colored_texts), end=end)
+        print(sep.join(colored_texts), end=end, flush=flush)
         return ""
 
-    def red(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="red", sep=sep, end=end)
+    def red(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="red", sep=sep, end=end, flush=flush)
 
-    def green(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="green", sep=sep, end=end)
+    def green(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="green", sep=sep, end=end, flush=flush)
 
-    def yellow(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="yellow", sep=sep, end=end)
+    def yellow(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="yellow", sep=sep, end=end, flush=flush)
 
-    def blue(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="blue", sep=sep, end=end)
+    def blue(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="blue", sep=sep, end=end, flush=flush)
 
-    def magenta(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="magenta", sep=sep, end=end)
+    def magenta(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="magenta", sep=sep, end=end, flush=flush)
 
-    def cyan(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="cyan", sep=sep, end=end)
+    def cyan(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="cyan", sep=sep, end=end, flush=flush)
 
-    def white(self, *args, sep=" ", end="\n"):
-        self.print_colored(*args, color="white", sep=sep, end=end)
+    def white(self, *args, sep=" ", end="\n", flush=False):
+        self.print_colored(*args, color="white", sep=sep, end=end, flush=flush)
