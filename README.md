@@ -2,12 +2,12 @@
 
 A simple AI agent that uses a LLM to answer questions, modify files, create files, talk and more. An example of how to make an AI Agent using the `openai` library.
 
-# Prerequisites
+## Prerequisites
 
 - Python 3.10+
 - OpenAI API Key
 
-# Setup
+## Setup
 
 1. Create a virtual environment
 
@@ -15,7 +15,21 @@ A simple AI agent that uses a LLM to answer questions, modify files, create file
 python -m venv venv
 ```
 
-2. Install the dependencies
+2. Activate the virtual environment
+
+### Windows
+
+```bash
+.\venv\Scripts\activate
+```
+
+### Linux/MacOS
+
+```bash
+source venv/bin/activate
+```
+
+3. Install the dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -32,5 +46,3 @@ cp .env.example .env
 ```bash
 python main.py
 ```
-
-

@@ -64,10 +64,10 @@ def get_tools(ai: AIFactory):
 
     async def write_file(file_name: str, file_content: str):
         """
-        Create or update a file with the given content
+        Create or update a file with the given content, encodes as UTF-8
         """
         try:
-            with open(file_name, "w") as f:
+            with open(file_name, "w", encoding="utf-8") as f:
                 f.write(file_content)
             return f"File {file_name} created successfully"
         except IOError as e:
